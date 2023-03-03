@@ -1,0 +1,376 @@
+/*
+===============
+Contact form
+===============
+*/
+
+@media screen and (max-width: 900px) {
+  .contact_form {
+    width: 100%;
+    padding: 0 5%;
+    .container {
+      width: 100%;
+      // ----------------------------------------------
+      // 入力画面
+      // ----------------------------------------------
+      .mw_wp_form_input {
+        form {
+          .area_contact_input {
+            // ----------------------------
+            // テキスト入力するタイプの入力欄
+            // ----------------------------
+            .form_item {
+              width: 100%;
+              margin-bottom: 20px;
+              .form_title {
+                color: #505050;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 2.4em;
+                .must_input {
+                  color: #e03333;
+                  padding: 0;
+                  display: inline;
+                }
+              }
+              // --------------
+              // 通常入力欄
+              p {
+                position: relative;
+                // 自動生成ｐ
+                .area_input {
+                  padding-left: 3%;
+                  width: 100%;
+                  height: 50px;
+                  background-color: #eeeeee;
+                  border: none;
+                  font-size: 13px;
+                }
+              }
+              // ----------------
+              //　氏名のように別れている入力欄
+              .area_flex_input {
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+              }
+              .area_flex_input > .area_input {
+                padding-left: 3%;
+                width: 100%;
+                height: 50px;
+                background-color: #eeeeee;
+                border: none;
+                font-size: 13px;
+              }
+            }
+
+            .form_item_textarea {
+              width: 100%;
+              p {
+                position: relative;
+                .area_textarea {
+                  padding-top: 15px;
+                  padding-left: 3%;
+                  width: 100%;
+                  height: 160px;
+                  background-color: #eeeeee;
+                  border: none;
+                  &_::placeholder {
+                    color: #b0b0b0;
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+            // ----------------------------
+            // 選択するタイプの入力欄
+            // ----------------------------
+            .form_item_select {
+              position: relative;
+              color: #505050;
+              font-size: 13px;
+              .select_arrow {
+                height: 0px;
+                width: 0px;
+                /* ---三角矢印の大きさ--- */
+                border: 7.2px solid;
+                border-color: transparent;
+                border-top: 12px solid #181818;
+                /* ---------------------- */
+                z-index: 3;
+                position: absolute;
+                top: 60%;
+                right: 25px;
+                pointer-events: none;
+              }
+            }
+
+            // select {
+            //   -webkit-appearance: none;
+            //   -moz-appearance: none;
+            //   appearance: none;
+            // }
+
+            // select.change_select {
+            //   color: #b0b0b0;
+            // }
+
+            // select.change_select_contact {
+            //   color: #b0b0b0;
+            // }
+
+            // select:invalid {
+            //   color: #b0b0b0;
+            // }
+          }
+          .area_btn {
+            width: 250px;
+            text-align: center;
+            padding: 12px 0;
+            margin: 20px auto;
+            background-color: #459657;
+            color: #ffffff;
+          }
+        }
+      }
+
+      // ----------------------------------------------
+      // 確認画面
+      // ----------------------------------------------
+      .mw_wp_form_confirm {
+        form {
+          .area_contact_confirm {
+            .form_item {
+              .form_title {
+                .must_input {
+                  display: none;
+                }
+              }
+            }
+            .form_item_select {
+              .select_arrow {
+                display: none;
+              }
+            }
+            .form_item_textarea {
+              align-items: center;
+              .form_title {
+                .must_input {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* -------------------------------------------- */
+
+  /*-----未入力-------- */
+  .error {
+    font-size: 13px;
+    position: absolute;
+    top: -22px;
+    right: 30px;
+    z-index: 3;
+  }
+
+  .form_item > p > .error {
+    font-size: 13px;
+  }
+
+  .form_item_textarea > p > .error {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .contact_form {
+    width: 100%;
+    padding: 0 5%;
+    .container {
+      width: 100%;
+      // ----------------------------------------------
+      // 入力画面
+      // ----------------------------------------------
+      .mw_wp_form_input {
+        form {
+          .area_contact_input {
+            // ----------------------------
+            // テキスト入力するタイプの入力欄
+            // ----------------------------
+            .form_item {
+              width: 100%;
+              margin-bottom: 20px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 50px;
+              .form_title {
+                color: #505050;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 2.4em;
+                .must_input {
+                  color: #e03333;
+                  padding: 0;
+                  display: inline;
+                }
+              }
+              // --------------
+              // 通常入力欄
+              p {
+                position: relative;
+                width: 67%;
+                // 自動生成ｐ
+                .area_input {
+                  padding-left: 3%;
+                  width: 100%;
+                  height: 50px;
+                  background-color: #eeeeee;
+                  border: none;
+                  font-size: 13px;
+                }
+              }
+              // ----------------
+              //　氏名のように別れている入力欄
+              .area_flex_input {
+                position: relative;
+                width: 67%;
+                display: flex;
+                gap: 2%;
+              }
+              .area_flex_input > .area_input {
+                padding-left: 3%;
+                width: 50%;
+                height: 50px;
+                background-color: #eeeeee;
+                border: none;
+                font-size: 13px;
+              }
+            }
+
+            .form_item_textarea {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              p {
+                width: 67%;
+                position: relative;
+                .area_textarea {
+                  padding-top: 15px;
+                  padding-left: 3%;
+                  width: 100%;
+                  height: 160px;
+                  background-color: #eeeeee;
+                  border: none;
+                  &_::placeholder {
+                    color: #b0b0b0;
+                  }
+                }
+              }
+            }
+            // ----------------------------
+            // 選択するタイプの入力欄
+            // ----------------------------
+            .form_item_select {
+              position: relative;
+              color: #505050;
+              font-size: 13px;
+              .select_arrow {
+                height: 0px;
+                width: 0px;
+                /* ---三角矢印の大きさ--- */
+                border: 7.2px solid;
+                border-color: transparent;
+                border-top: 12px solid #181818;
+                /* ---------------------- */
+                z-index: 3;
+                position: absolute;
+                top: 40%;
+                right: 25px;
+                pointer-events: none;
+              }
+            }
+
+            // select {
+            //   -webkit-appearance: none;
+            //   -moz-appearance: none;
+            //   appearance: none;
+            // }
+
+            // select.change_select {
+            //   color: #b0b0b0;
+            // }
+
+            // select.change_select_contact {
+            //   color: #b0b0b0;
+            // }
+
+            // select:invalid {
+            //   color: #b0b0b0;
+            // }
+          }
+          .area_btn {
+            margin: 20px auto;
+            width: 250px;
+            text-align: center;
+            margin: 20px auto;
+            padding: 12px 0;
+            background-color: #459657;
+            color: #ffffff;
+          }
+        }
+      }
+      // ----------------------------------------------
+      // 確認画面
+      // ----------------------------------------------
+      .mw_wp_form_confirm {
+        form {
+          .area_contact_confirm {
+            .form_item {
+              .form_title {
+                .must_input {
+                  display: none;
+                }
+              }
+            }
+            .form_item_select {
+              .select_arrow {
+                display: none;
+              }
+            }
+            .form_item_textarea {
+              align-items: center;
+              .form_title {
+                .must_input {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /* -----------------------------------
+            未入力
+    --------------------------------------- */
+  .error {
+    position: absolute;
+    top: 40px;
+    left: -49%;
+    z-index: 3;
+    font-size: 14px;
+  }
+  .form_item > p > .error {
+    font-size: 14px;
+  }
+  .form_item_textarea > p > .error {
+    font-size: 14px;
+  }
+}

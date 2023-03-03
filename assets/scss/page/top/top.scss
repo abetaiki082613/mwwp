@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+// base set
+@use "../../bases/reset";
+@use "../../bases/base";
+@use "../../modules/";
+
+// layout set
+@use "../../layouts/header";
+@use "../top/index";
+@use "../top/contact";
+@use "../../layouts/footer";
